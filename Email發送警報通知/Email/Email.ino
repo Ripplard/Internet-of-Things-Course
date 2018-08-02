@@ -9,7 +9,7 @@ const String       PASSWORD  = "QWNjb3VudERvZXNOb3RFeGlzdA=="; // Encoded in Bas
 const String       MAIL_FROM = "YourSourceEmail@gmail.com";
 const String       MAIL_TO   = "YourDestinationEmail@gmail.com";
 const String       SUBJECT   = "Yet another subject";
-const String       CONTENT   = "Yet another body";  
+const String       BODY   = "Yet another body";  
 
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 const String smtp_server = "mail.smtp2go.com";
@@ -23,7 +23,7 @@ void setup() {
     MAIL_FROM,
     MAIL_TO,
     SUBJECT,
-    CONTENT
+    BODY
   );
   smtp_service.send_email(email);
 }
