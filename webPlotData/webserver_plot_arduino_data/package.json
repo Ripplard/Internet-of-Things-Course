@@ -1,0 +1,16 @@
+{
+  "name": "webserver_plot_arduino_data",
+  "version": "1.0.0",
+  "description": "透過串列埠取得arduino感測器的資料，並將資料繪成折線圖顯示",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "serialport": "^6.2.2"
+  }
+}

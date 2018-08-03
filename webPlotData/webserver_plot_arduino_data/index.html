@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">    
+<head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="tester" style="width:1000px;height:500px;"></div>
+	<script type="text/javascript">
+$(document).ready(function(){
+        $.get("/data", function(data, status){
+			TESTER = document.getElementById('tester');
+			Plotly.plot( TESTER, [{
+			//x: [1, 2, 3, 4, 5],
+			y: data }], {
+			margin: { t: 0 } } );
+        });
+});
+		
+		
+
+	</script>
+</body>
+</html>
