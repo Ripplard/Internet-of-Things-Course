@@ -14,8 +14,19 @@ $(document).ready(function(){
 			//x: [1, 2, 3, 4, 5],
 			y: data }], {
 			margin: { t: 0 } } );
+			index = data.length;
+			setInterval(function(){
+				$.get("/data", function(data, status){
+					const difData = data.slice(index - 1);
+					Plotly.extendTraces(temperatureChart, {y: [difData]}, [0]);
+					index = data.length;
+				});
+			}, 1000);
         });
 });
+		
+		
+
 	</script>
 </body>
 </html>
