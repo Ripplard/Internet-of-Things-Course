@@ -1,0 +1,27 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">    
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+		<form action="/ledon" method="get">
+			<input type="submit" value="LED ON" style="width:100px;height:50px;"/>
+		</form>
+		<form action="/ledoff" method="get">
+			<input type="submit" value="LED OFF" style="width:100px;height:50px;"/>
+		</form>
+		<div class="sliderbar">
+			Servo Angle: <input id="sld_servoAngle" type="range" value="90" min="0" max="180">
+			<output id="tb_servoAngle"></output>
+		</div>
+		<div class="sliderbar">
+			LED Lightness: <input id="sld_lightness" type="range" value="0" min="0" max="255">
+			<!-- 顯示目前input數值 -->
+			<output id="tb_lightness"></output>
+		</div>
+		<!-- 你的js程式 -->
+		<script src="js/slider_debounce.js"></script>
+	</div>
+</body>
+</html>
