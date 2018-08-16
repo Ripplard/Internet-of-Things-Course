@@ -1,22 +1,27 @@
 <!DOCTYPE>
-<html xmlns="http://www.w3.org/1999/xhtml">    
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 	<title>Temperature Chart Static</title>
 	<script src="js/plotly-1.39.4.min.js"></script>
 	<script src="js/jquery-3.3.1.min.js"></script>
 </head>
+
 <body>
-    <div id="temperatureChart" style="width:1000px;height:500px;"></div>
+	<div id="temperatureChart" style="width:1000px;height:500px;"></div>
 	<script type="text/javascript">
-	$(document).ready(function(){
-        $.get("/data", function(data, status){
-			var index = 0;
-			Plotly.plot( temperatureChart, [{
-			//x: [1, 2, 3, 4, 5],
-			y: data }], {
-			margin: { t: 0 } } );
-        });
-	});
+		$(document).ready(function () {
+			$.get("/data", function (data, status) {
+				var index = 0;
+				Plotly.plot(temperatureChart, [{
+					//x: [1, 2, 3, 4, 5],
+					y: data
+				}], {
+						margin: { t: 0 }
+					});
+			});
+		});
 	</script>
 </body>
+
 </html>
