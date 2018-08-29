@@ -1,5 +1,5 @@
-<!DOCTYPE>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 
 <head>
 	<title>Temperature Chart Static</title>
@@ -13,7 +13,7 @@
 		$(document).ready(function () {
 			$.get("/data", function (data, status) {
 				var index = 0;
-				Plotly.plot(temperatureChart, [{
+				Plotly.plot("temperatureChart", [{
 					//x: [1, 2, 3, 4, 5],
 					y: data
 				}], {
