@@ -1,19 +1,17 @@
-<!DOCTYPE>
-<html xmlns="http://www.w3.org/1999/xhtml">    
+<!DOCTYPE html>
+<html>    
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div>
-		<form action="/ledon" method="get">
-			<input type="submit" value="LED ON" style="width:100px;height:50px;"/>
-		</form>
-		<form action="/ledoff" method="get">
-			<input type="submit" value="LED OFF" style="width:100px;height:50px;"/>
-		</form>
+		<div style="border-style: solid; border-color:rgb(255, 51, 0);display: inline-block;margin:4px;padding:2px">
+			<button id="bt_ledon">LED ON</button>
+			<button id="bt_ledoff">LED OFF</button>
+		</div>
 		<div class="sliderbar">
-			Servo Angle: <input id="sld_servoAngle" type="range" value="90" min="0" max="180">
-			<output id="tb_servoAngle"></output>
+			Servo Angle: <input id="sld_servo" type="range" value="90" min="0" max="180">
+			<output id="tb_servo"></output>
 		</div>
 		<div class="sliderbar">
 			LED Lightness: <input id="sld_lightness" type="range" value="0" min="0" max="255">

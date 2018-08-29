@@ -22,7 +22,7 @@ parser.on('data', function(data){
 });
 
 // 加載檔案目錄js，並也將它提供到/js的url下
-app.use('/js',express.static('js'));
+app.use('/js',express.static(__dirname + '/js'));
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
