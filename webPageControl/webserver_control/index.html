@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html>    
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
     <div>
-		<div>
-			<button id="bt_ledon">LED ON</button>
-			<button id="bt_ledoff">LED OFF</button>
+		<div style="margin-bottom:20px;margin-top:20px;margin-left:10px;margin-right:10px">
+			<button id="bt_ledon" class="btn btn-primary btn-lg btn-block">LED ON</button>
+			<button id="bt_ledoff" class="btn btn-primary btn-lg btn-block">LED OFF</button>
 		</div>
-		<div class="sliderbar">
-			Servo Angle: <input id="sld_servo" type="range" value="90" min="0" max="180">
+		<div class="sliderbar" style="margin-bottom:20px;margin-top:20px;margin-left:10px;margin-right:10px">
+			Servo Angle: <input id="sld_servo" class="form-control-range" type="range" value="90" min="0" max="180">
 			<output id="tb_servo"></output>
 		</div>
-		<div class="sliderbar">
-			LED Lightness: <input id="sld_lightness" type="range" value="0" min="0" max="255">
+		<div class="sliderbar" style="margin-bottom:20px;margin-top:20px;margin-left:10px;margin-right:10px">
+			LED Lightness:<input id="sld_lightness" class="form-control-range" type="range" value="0" min="0" max="255">
 			<!-- 顯示目前input數值 -->
 			<output id="tb_lightness"></output>
 		</div>
-		<!-- 你的js程式 -->
-		<script src="js/slider_debounce.js"></script>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="js/slider_debounce.js"></script>
 </body>
 </html>
