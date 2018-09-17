@@ -6,16 +6,19 @@ const unsigned int DAYTIME_PORT = 13;
 // 裝置mac位址
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 // IP位址
-IPAddress my_ip(192, 168, 1, 120);
+IPAddress my_ip(140, 125, 32, 0);
 // 連線至NTP伺服器的IP位址，請用nslookup查找
-IPAddress time_server(132, 163, 97, 1); // time.nist.gov
+IPAddress time_server(132, 163, 97, 2); // time.nist.gov
+IPAddress dnServer (140, 125, 252, 1);
+IPAddress gateway (140, 125, 32, 254);
+IPAddress subnet (255, 255, 255, 0);
 EthernetClient client; 
 
 void setup() {
   // 開啟串列埠
   Serial.begin(BAUD_RATE);
   // 開啟網路串列埠
-  Ethernet.begin(mac, my_ip); 
+  Ethernet.begin(mac, my_ip, dnServer, gateway, subnet); 
 }
 
 void loop() {
@@ -32,7 +35,6 @@ void loop() {
       char c = client.read();
       Serial.print(c);
     }
-    
     Serial.println("Disconnecting.");
     client.stop();
   }
